@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Watering App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -31,7 +31,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Watering App'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Watering App'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.help),
+              onPressed: () {
+                print("Hi");
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }
